@@ -1,0 +1,26 @@
+Guide Line 01:
+--------------
+Create a file named `applicationContext.xml`
+in the  "src/main/resources directory"
+
+
+Guide Line 02: ( Dependency Injection's )
+--------------
+
+Constructor Dependency Injection:
+
+ 	<bean id="userService" class="com.example.UserService">
+    		<constructor-arg ref="dataSource"/>
+	</bean>
+
+For Bean Scopes :
+
+	<bean id="userService" class="com.example.UserService" scope="singleton"/>
+
+Autoweiring :
+
+	<bean id="userService" class="com.example.UserService" autowire="byType"/>
+
+
+
+
